@@ -2,7 +2,7 @@
 
 header('Content-type: text/css');
 
-sleep(5);
+sleep(3);
 
 ?>
 p {

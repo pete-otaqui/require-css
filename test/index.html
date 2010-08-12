@@ -11,7 +11,6 @@
 	<script src="../lib/require-css.js" type="text/javascript"></script>
 	<script type="text/javascript">
 	    $(document).ready(function() {
-	        console.log('ready');
     	    requireCss('css/test.css',
         	    function() {
     	            return ( $('h1').css('color') == 'rgb(255, 0, 0)' );
@@ -23,7 +22,6 @@
 	    
     	    requireCss('css/test.css.php',
         	    function() {
-        	        console.log($('p').size());
     	            return ( $('p').css('color') == 'rgb(0, 0, 255)' );
         	    },
         	    function() {
