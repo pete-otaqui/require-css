@@ -10,34 +10,34 @@
 	<script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
 	<script src="../lib/require-css.js" type="text/javascript"></script>
 	<script type="text/javascript">
-	    $(document).ready(function() {
-    	    requirecss('css/test.css',
-        	    function() {
-    	            return ( $('h1').css('color') == 'rgb(255, 0, 0)' );
-        	    },
-        	    function() {
-        	        console.log('Flat CSS Loaded!');
-        	    }
-    	    );
-	    
-    	    requirecss('css/test.css.php',
-        	    function() {
-    	            return ( $('p').css('color') == 'rgb(0, 0, 255)' );
-        	    },
-        	    function() {
-        	        console.log('Forced wait CSS Loaded!');
-        	    }
-    	    );
-	    });
-	    
+		$(document).ready(function() {
+			requirecss('css/test.css',
+				function() {
+					return ( $('h1').css('color') == 'rgb(255, 0, 0)' );
+				},
+				function() {
+					console.log('Flat CSS Loaded!');
+				}
+			);
+		
+			requirecss('css/test.css.php',
+				function() {
+					return ( $('p').css('color') == 'rgb(0, 0, 255)' );
+				},
+				function() {
+					console.log('Forced wait CSS Loaded!');
+				}
+			);
+		});
+		
 	</script>
 	
 </head>
 
 <body>
-    
-    <h1>Require CSS</h1>
-    <p>This is just a test</p>
+	
+	<h1>Require CSS</h1>
+	<p>This is just a test</p>
 
 </body>
 </html>
