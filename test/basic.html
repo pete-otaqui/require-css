@@ -11,21 +11,21 @@
 	<script src="../lib/require-css.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			requirecss('css/test.css',
+			requireCss('css/basic.css',
 				function() {
 					return ( $('h1').css('color') == 'rgb(255, 0, 0)' );
 				},
 				function() {
-					console.log('Flat CSS Loaded!');
+					$('#output').append('> Flat CSS Loaded!\n');
 				}
 			);
 		
-			requirecss('css/test.css.php',
+			requireCss('css/basic.css.php',
 				function() {
 					return ( $('p').css('color') == 'rgb(0, 0, 255)' );
 				},
 				function() {
-					console.log('Forced wait CSS Loaded!');
+					$('#output').append('> Forced wait CSS Loaded!\n');
 				}
 			);
 		});
@@ -37,7 +37,10 @@
 <body>
 	
 	<h1>Require CSS</h1>
-	<p>This is just a test</p>
+	<p>This is just a basic test.  It shows two css files being loaded, one of which is actually a php script that will force a 3 second wait before output.</p>
+	
+	<h2>Debug output:</h2>
+	<pre id="output" style="padding:10px; margin:10px; background-color:#eee; height:100px; overflow:auto;"></pre>
 
 </body>
 </html>
